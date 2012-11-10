@@ -43,12 +43,14 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 	public static EditText username;
 	public static EditText password;
 	public static EditText confirmPassword;
-	public static EditText fName;
-	public static EditText mName;
-	public static EditText lName;
+	public static EditText txtFName;
+	public static EditText txtMName;
+	public static EditText txtLName;
 	public static Spinner spnrChildren;
 	public static ChildrenSelectedListener childrenListener;
 	private static ArrayList<LinearLayout> dynamicLayouts;
+	public static EditText txtEmailAddress;
+	public static EditText txtPhoneNumer;
 
 	/**
 	 * Displays each section
@@ -82,9 +84,11 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 				 //inflate the required layout for the fragment
 				 rootView = inflater.inflate(R.layout.personal_fragment, container, false);
 				 Log.d(TAG,"Loaded personal creation screen");
-				 fName = ((EditText) rootView.findViewById(R.id.txtFirstName));
-				 mName = ((EditText) rootView.findViewById(R.id.txtMiddleName));
-				 lName = ((EditText) rootView.findViewById(R.id.txtLastName));
+				 txtFName = ((EditText) rootView.findViewById(R.id.txtFirstName));
+				 txtMName = ((EditText) rootView.findViewById(R.id.txtMiddleName));
+				 txtLName = ((EditText) rootView.findViewById(R.id.txtLastName));
+				 txtEmailAddress = ((EditText) rootView.findViewById(R.id.txtEmailAddress));
+				 txtPhoneNumer = ((EditText) rootView.findViewById(R.id.txtPhoneNumber));
 				 return rootView;
 			 }
 			 /*Display the experience screen*/
@@ -253,7 +257,7 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 				 createAccount.setOnClickListener(new View.OnClickListener() {
 
 
-					 private String usernameInput, passwordInput, confirmPasswordInput, fNameInput, mNameInput, lNameInput;
+					 private String usernameInput, passwordInput, confirmPasswordInput, fNameInput, mNameInput, lNameInput, emailAddress, phoneNumber;
 
 
 					 public void onClick(View v) {
@@ -278,11 +282,14 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 							 // TODO Auto-generated catch block
 							 e1.printStackTrace();
 						 }
-						 fNameInput = fName.getText().toString();
-						 mNameInput = mName.getText().toString();
-						 lNameInput = lName.getText().toString();
+						 fNameInput = txtFName.getText().toString();
+						 mNameInput = txtMName.getText().toString();
+						 lNameInput = txtLName.getText().toString();
+						 emailAddress = txtEmailAddress.getText().toString();
+						 phoneNumber = txtPhoneNumer.getText().toString();
+								 
 						 if(DEBUG){
-							 Log.v(TAG,"create clicked" + usernameInput + " " + fNameInput + " " + mNameInput + " " + lNameInput );
+							 Log.v(TAG,"create clicked" + usernameInput + " " + fNameInput + " " + mNameInput + " " + lNameInput + " " + emailAddress );
 						 }
 						 //Send the informationt to the DB only if passwords match
 						 if(passwordInput.equals(confirmPasswordInput)){
@@ -293,6 +300,8 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 								 user.put("f_name",fNameInput);
 								 user.put("m_name",mNameInput);
 								 user.put("l_name",lNameInput);
+								 user.put("email_addr",emailAddress);
+								 user.put("phone_number",phoneNumber);
 							 } catch (JSONException e){
 								 e.printStackTrace();
 							 }
