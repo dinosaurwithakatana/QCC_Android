@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class LoginActivity extends Activity{
@@ -22,20 +23,20 @@ public class LoginActivity extends Activity{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);
+		setContentView(R.layout.activity_loginlinear);
 
 		final EditText username = (EditText)findViewById(R.id.txtUsernameInput);
 		final EditText password = (EditText)findViewById(R.id.txtPasswordInput);
 
-		Button login = (Button) findViewById(R.id.btnLogin);
+		Button signIn = (Button) findViewById(R.id.btnSignIn);
 		
 			// TODO Just for now, this way we can skip logging for a bit
 //		Intent i = new Intent(LoginActivity.this,MainActivity.class);
 //		startActivity(i);
 		
-		login.setOnClickListener(new View.OnClickListener() {
+		signIn.setOnClickListener(new View.OnClickListener() {
 
-		
+			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -94,9 +95,11 @@ public class LoginActivity extends Activity{
 
 			}
 		});
+		
+		
 
-		Button createAccountButton = (Button)findViewById(R.id.btnCreateAcct);
-		createAccountButton.setOnClickListener(new View.OnClickListener() {
+		Button newUser = (Button) findViewById(R.id.btnNewUser);
+		newUser.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
