@@ -94,7 +94,6 @@ case 3: {
 		private String usernameInput, passwordInput, confirmPasswordInput, fNameInput, mNameInput, lNameInput;
 
 
-		@Override
 		public void onClick(View v) {
 						// TODO Auto-generated method stub
 
@@ -252,14 +251,12 @@ private static boolean DEBUG = true;
 	}
 
 
-	@Override
 	public void onTabReselected(Tab arg0, android.app.FragmentTransaction arg1) {
 		// TODO Auto-generated method stub
 		
 	}
 
 
-	@Override
 	public void onTabSelected(Tab arg0, android.app.FragmentTransaction arg1) {
 		// TODO Auto-generated method stub
 		mViewPager.setCurrentItem(arg0.getPosition());
@@ -267,7 +264,6 @@ private static boolean DEBUG = true;
 	}
 
 
-	@Override
 	public void onTabUnselected(Tab arg0, android.app.FragmentTransaction arg1) {
 		// TODO Auto-generated method stub
 		
