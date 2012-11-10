@@ -37,13 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_below="@+id/banner"
-<<<<<<< HEAD
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
-=======
-        android:layout_marginTop="170dp"
->>>>>>> UI Revamp in Progress
-        android:ems="10"
         android:hint="@string/username"
         android:inputType="textNoSuggestions|textPersonName" >
 
