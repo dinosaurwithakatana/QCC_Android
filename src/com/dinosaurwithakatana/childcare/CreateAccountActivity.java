@@ -1,5 +1,8 @@
 package com.dinosaurwithakatana.childcare;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -96,8 +99,24 @@ case 3: {
 						// TODO Auto-generated method stub
 
 			usernameInput = username.getText().toString();
-			passwordInput = password.getText().toString();
-			confirmPasswordInput = confirmPassword.getText().toString();
+			try {
+				passwordInput = AeSimpleSHA1.SHA1("salt"+password.getText().toString());
+			} catch (NoSuchAlgorithmException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			} catch (UnsupportedEncodingException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
+			try {
+				confirmPasswordInput = AeSimpleSHA1.SHA1("salt"+confirmPassword.getText().toString());
+			} catch (NoSuchAlgorithmException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (UnsupportedEncodingException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			fNameInput = fName.getText().toString();
 			mNameInput = mName.getText().toString();
 			lNameInput = lName.getText().toString();
