@@ -182,7 +182,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter{
 		switch (position) {
 			case 0: return getString(R.string.tab_login_info).toUpperCase();
 			case 1: return getString(R.string.tab_p_info).toUpperCase();
-			case 2: return getString(R.string.tab_experience).toUpperCase();
+			case 2: return getString(R.string.tab_children).toUpperCase();
 		}
 		return null;
 	}

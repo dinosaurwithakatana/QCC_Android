@@ -15,7 +15,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="@string/first_name" >
+            android:hint="@string/first_name"
+            android:inputType="textPersonName" >
+
         </EditText>
 
         <EditText
@@ -24,7 +26,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="@string/middle_name" >
+            android:hint="@string/middle_name"
+            android:inputType="textPersonName" >
+
         </EditText>
 
         <EditText
@@ -33,7 +37,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="@string/last_name" >
+            android:hint="@string/last_name"
+            android:inputType="textPersonName" >
+
         </EditText>
 
         <EditText
@@ -58,16 +64,12 @@
 
         </EditText>
 
-        <EditText
-            android:id="@+id/txtZipCode"
+        <Spinner
+            android:id="@+id/spnrCounty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="@string/zip_code"
-            android:inputType="number|phone" >
+            android:layout_weight="1" />
 
-        </EditText>
     </LinearLayout>
 
 </ScrollView>

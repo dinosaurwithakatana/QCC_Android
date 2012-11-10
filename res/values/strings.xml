@@ -14,7 +14,7 @@
 	<string name="last_name">Last Name</string>
 	<string name="tab_p_info">Personal</string>
 	<string name="tab_login_info">Login</string>
-	<string name="tab_experience">Experience</string>
+	<string name="tab_children">Children</string>
 	<string name="email_prompt">Email Address</string>
 	<string name="phone_number">Phone Number</string>
 	<string name="zip_code">Zip Code</string>

@@ -6,7 +6,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 public class JobItemSelectedListener implements OnItemSelectedListener {
-	private static final String TAG = "Roaming Recruiter " +JobItemSelectedListener.class.getSimpleName();                                                                                                                  
+	private static final String TAG = "Child Care" +JobItemSelectedListener.class.getSimpleName();                                                                                                                  
 	private String jobType;
 	/**
 	 * @return the education
