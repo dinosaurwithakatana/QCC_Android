@@ -35,6 +35,39 @@
             android:ems="10"
             android:hint="@string/last_name" >
         </EditText>
+
+        <EditText
+            android:id="@+id/txtEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/email_prompt"
+            android:inputType="textEmailAddress" >
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/phone_number"
+            android:inputType="phone" >
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtZipCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/zip_code"
+            android:inputType="number|phone" >
+
+        </EditText>
     </LinearLayout>
 
 </ScrollView>
