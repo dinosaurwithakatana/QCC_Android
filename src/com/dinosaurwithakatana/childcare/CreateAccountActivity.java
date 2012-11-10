@@ -17,6 +17,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -128,45 +129,112 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 						 ScrollView sv = (ScrollView) rootView.findViewById(R.id.childrenScrlView);
 						 Log.v(TAG,"grabbed sroll view in children fragment");
 
-						 LinearLayout childrenLayout = (LinearLayout)rootView.findViewById(R.id.children_linear);
-						 LinearLayout dynamicLayoutBase= (LinearLayout)rootView.findViewById(R.id.dynamic_children_linear);
-						 dynamicLayoutBase.removeAllViews();
+						 LinearLayout lytChildrenLayout = (LinearLayout)rootView.findViewById(R.id.children_linear);
+						 LinearLayout lytDynamicLayoutBase= (LinearLayout)rootView.findViewById(R.id.dynamic_children_linear);
+						 lytDynamicLayoutBase.removeAllViews();
 						 Log.v(TAG,"grabbed linear layouts inside children fragment scroll view");
 
 						 //New linear layout to display the dynamic stuff
-						 LinearLayout newLayout = new LinearLayout(getActivity().getBaseContext());
-						 newLayout.setId(R.id.dynamic_children_layout);
-						 newLayout.setOrientation(LinearLayout.VERTICAL);
-						 newLayout.removeAllViews();
+						 LinearLayout lytNewLayout = new LinearLayout(getActivity().getBaseContext());
+						 lytNewLayout.setId(R.id.dynamic_children_layout);
+						 lytNewLayout.setOrientation(LinearLayout.VERTICAL);
+						 lytNewLayout.removeAllViews();
 
 
 						 dynamicLayouts = new ArrayList<LinearLayout>();
 
 						 for(int i = 0;i<numOfChildren;i++){
 							 //Horizontal Linear Layout for each of the children
-							 LinearLayout tempLayout = new LinearLayout(getActivity().getBaseContext());
-							 tempLayout.setOrientation(LinearLayout.VERTICAL);
-
-							 //Textview to prompt the user to enter DOBs for their children
-							 TextView dobPrompt = new TextView(getActivity().getBaseContext());
-							 dobPrompt.setText("Childrens' DOB");
-							 dobPrompt.setId(R.id.txtvw_dob_prompt);
+							 LinearLayout lytTempLayout = new LinearLayout(getActivity().getBaseContext());
+							 lytTempLayout.setOrientation(LinearLayout.VERTICAL);
 
 							 //Add textview to horizontal layout to prompt user
-							 TextView childDobPrompt = new TextView(getActivity().getBaseContext());
-							 childDobPrompt.setText("Child "+i+1);
-							 Button dobSelector = new Button(getActivity().getBaseContext());
+							 TextView tvChildLabel= new TextView(getActivity().getBaseContext());
+							 tvChildLabel.setText("Child "+(i+1));
+							 
+							 //Layout to hold name stuff
+							 LinearLayout lytNameLayout = new LinearLayout(getActivity().getBaseContext());
+							 lytNameLayout.setOrientation(LinearLayout.VERTICAL);
+							 
+							 //TextView to prompt the user for their child's name
+							 TextView tvNamePrompt = new TextView(getActivity().getBaseContext());
+							 tvNamePrompt.setText("Child's Name");
+							 
+							 //EditText to accept first name
+							 EditText edtxtChildFirstName = new EditText(getActivity().getBaseContext());
+							 edtxtChildFirstName.setHint("First Name");
+							 edtxtChildFirstName.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
 
-							 tempLayout.addView(dobPrompt);
-							 tempLayout.addView(childDobPrompt);
-							 tempLayout.addView(dobSelector);
-							 dynamicLayouts.add(tempLayout);
+							 //EditText to accept middle name
+							 EditText edtxtChildMiddleName = new EditText(getActivity().getBaseContext());
+							 edtxtChildMiddleName.setHint("Middle Name");
+							 edtxtChildMiddleName.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
+							 
+							 //EditText to accept first name
+							 EditText edtxtChildLastName = new EditText(getActivity().getBaseContext());
+							 edtxtChildLastName.setHint("Last Name");
+							 edtxtChildLastName.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
+							 
+							 //Add Name stuff to it's layout
+							 lytNameLayout.addView(tvNamePrompt);
+							 lytNameLayout.addView(edtxtChildFirstName);
+							 lytNameLayout.addView(edtxtChildMiddleName);
+							 lytNameLayout.addView(edtxtChildLastName);
+							 
+							 //Layout to hold the DOB stuff
+							 LinearLayout lytAgeLayout = new LinearLayout(getActivity().getBaseContext());
+							 lytAgeLayout.setOrientation(LinearLayout.HORIZONTAL);
+
+							 //Textview to prompt the user to enter DOBs for their children
+							 TextView tvAgePrompt = new TextView(getActivity().getBaseContext());
+							 tvAgePrompt.setText("Child's Age");
+							 tvAgePrompt.setId(R.id.txtvw_dob_prompt);
+
+							 //Spinner to select age
+							 Spinner spnrAgeSelect = new Spinner(getActivity().getBaseContext());
+							 spnrAgeSelect.setOnItemSelectedListener(new OnItemSelectedListener(
+									 ) {
+
+								 @Override
+								 public void onItemSelected(
+										 AdapterView<?> arg0, View arg1,
+										 int arg2, long arg3) {
+									 // TODO Auto-generated method stub
+
+								 }
+
+								 @Override
+								 public void onNothingSelected(
+										 AdapterView<?> arg0) {
+									 // TODO Auto-generated method stub
+
+								 }
+							 });
+
+							 //Adapter to show the different age ranges
+							 ArrayAdapter<CharSequence> childrenAdapter = ArrayAdapter.createFromResource(getActivity().getBaseContext(), R.array.age_list, android.R.layout.simple_spinner_dropdown_item);
+							 childrenAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+							 spnrAgeSelect.setAdapter(childrenAdapter);
+							 Log.v(TAG,"Spinner listener added and adapter added to children num");
+
+							 //Add the DOB stuff to the DOB layout
+							 lytAgeLayout.addView(tvAgePrompt);
+							 lytAgeLayout.addView(spnrAgeSelect);
+
+
+
+
+							 //Add the whole shebang to the main layout
+							 lytTempLayout.addView(tvChildLabel);
+							 lytTempLayout.addView(lytNameLayout);
+							 lytTempLayout.addView(lytAgeLayout);
+							 dynamicLayouts.add(lytTempLayout);
 
 						 }
 						 for(int i = 0; i<dynamicLayouts.size();i++){
-							 newLayout.addView(dynamicLayouts.get(i));
+							 lytNewLayout.addView(dynamicLayouts.get(i));
 						 }
-						 dynamicLayoutBase.addView(newLayout);
+						 lytDynamicLayoutBase.addView(lytNewLayout);
 
 					 }
 
@@ -174,9 +242,9 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 
 
 				 //Add the string array for the number of children to the spinner
-				 ArrayAdapter<CharSequence> childrenAdapter = ArrayAdapter.createFromResource(getActivity().getBaseContext(), R.array.num_of_children, android.R.layout.simple_spinner_dropdown_item);
-				 childrenAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				 spnrChildren.setAdapter(childrenAdapter);
+				 ArrayAdapter<CharSequence> ageAdapter= ArrayAdapter.createFromResource(getActivity().getBaseContext(), R.array.num_of_children, android.R.layout.simple_spinner_dropdown_item);
+				 ageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+				 spnrChildren.setAdapter(ageAdapter);
 				 Log.v(TAG,"Spinner listener added and adapter added to children num");
 
 

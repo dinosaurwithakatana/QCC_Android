@@ -35,4 +35,15 @@
 		<item>6</item>
 		<item>7</item>
 	</string-array>
+	<string-array name="age_list">
+		<item>Expecting</item>
+		<item>0 - 6 Mo</item>
+		<item>6 - 12 Mo</item>
+		<item>1 - 2 Yr</item>
+		<item>2 - 3 Yr</item>
+		<item>3 - 4 Yr</item>
+		<item>4 - 5 Yr</item>
+		<item>5 - 12 Yr</item>
+		<item>12+ Yr</item>
+	</string-array>
 </resources>

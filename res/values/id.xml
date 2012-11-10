@@ -2,5 +2,11 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <item type="id" name="dynamic_children_layout"/>
     <item type="id" name="txtvw_dob_prompt"/>
-    
+    <item type="id" name="txt_child_first_name_1"/>
+    <item type="id" name="txt_child_first_name_2"/>
+    <item type="id" name="txt_child_first_name_3"/>
+    <item type="id" name="txt_child_first_name_4"/>
+    <item type="id" name="txt_child_first_name_5"/>
+    <item type="id" name="txt_child_first_name_6"/>
+    <item type="id" name="txt_child_first_name_7"/>
 </resources>
