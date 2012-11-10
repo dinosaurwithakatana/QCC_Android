@@ -4,6 +4,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
 public class ChildrenSelectedListener implements OnItemSelectedListener {
 	private static final String TAG = "Child Care" +JobItemSelectedListener.class.getSimpleName();                                                                                                                  
@@ -29,7 +31,6 @@ public class ChildrenSelectedListener implements OnItemSelectedListener {
 		Log.v(TAG,"Selected:"+arg2);
 
 		numOfChildren = arg2 +1;
-			
 
 	}
 

@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/expScrlView"
+    android:id="@+id/childrenScrlView"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
     <LinearLayout
+        android:id="@+id/children_linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/spnrNumOfChildren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/dynamic_children_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnCreate"

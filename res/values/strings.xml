@@ -26,4 +26,13 @@
 	<string name="talk_expert">Talk to an Expert!</string>
 	<string name="expert_hours">M-F 8:30AM-5PM EST</string>
 	<string name="expert_number">877-255-4254</string>
+	<string-array name="num_of_children">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+	</string-array>
 </resources>

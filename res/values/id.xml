@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item type="id" name="dynamic_children_layout"/>
+    <item type="id" name="txtvw_dob_prompt"/>
+    
+</resources>
