@@ -8,13 +8,15 @@
     <ImageView
         android:id="@+id/banner"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:src="@drawable/loginbanner" />
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/vectorlogo" />
 
     <Button
         android:id="@+id/btnCreateAcct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight=".9"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="44dp"
@@ -35,8 +37,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_below="@+id/banner"
+<<<<<<< HEAD
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
+=======
+        android:layout_marginTop="170dp"
+>>>>>>> UI Revamp in Progress
         android:ems="10"
         android:hint="@string/username"
         android:inputType="textNoSuggestions|textPersonName" >

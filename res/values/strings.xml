@@ -26,6 +26,7 @@
 	<string name="talk_expert">Talk to an Expert!</string>
 	<string name="expert_hours">M-F 8:30AM-5PM EST</string>
 	<string name="expert_number">877-255-4254</string>
+<<<<<<< HEAD
 	<string-array name="num_of_children">
 		<item>1</item>
 		<item>2</item>
@@ -46,4 +47,20 @@
 		<item>5 - 12 Yr</item>
 		<item>12+ Yr</item>
 	</string-array>
+=======
+	
+	<style name="ButtonText">
+    <item name="android:layout_width">fill_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">#ffffff</item>
+    <item name="android:gravity">center</item>
+    <item name="android:layout_margin">3dp</item>
+    <item name="android:textSize">30dp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:shadowColor">#000000</item>
+    <item name="android:shadowDx">1</item>
+    <item name="android:shadowDy">1</item>
+    <item name="android:shadowRadius">2</item>
+	</style>
+>>>>>>> UI Revamp in Progress
 </resources>
