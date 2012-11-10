@@ -89,6 +89,8 @@ public class LoginActivity extends Activity{
 					e.printStackTrace();
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
+						Log.d(TAG,"Login Unsuccessful");
+						Toast.makeText(getApplicationContext(), "Bad Username!", Toast.LENGTH_SHORT).show();
 					e.printStackTrace();
 				}
 
