@@ -48,19 +48,7 @@ care in Georgia.</string>
 		<item>5 - 12 Yr</item>
 		<item>12+ Yr</item>
 	</string-array>
-	<style name="ButtonText">
-    <item name="android:layout_width">fill_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:textColor">#ffffff</item>
-    <item name="android:gravity">center</item>
-    <item name="android:layout_margin">3dp</item>
-    <item name="android:textSize">30dp</item>
-    <item name="android:textStyle">bold</item>
-    <item name="android:shadowColor">#000000</item>
-    <item name="android:shadowDx">1</item>
-    <item name="android:shadowDy">1</item>
-    <item name="android:shadowRadius">2</item>
-	</style>
+	
     <string name="learn_about_caps">Learn More About CAPS</string>
     <string name="learn_about_tanf">Learn More About TANF</string>
     <string name="open_website">Open State Application</string>

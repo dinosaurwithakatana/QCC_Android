@@ -1,12 +1,13 @@
  <resources>
-    <color name="backgroundColor">#afafaf</color>
+    <color name="backgroundColor">#cfcfcf</color>
+    <color name="backgroundColorDark">#afafaf</color>
     <color name="backgroundColorAlt">#b7dbfd</color>
     <color name="backgroundColorLight">#ffffff</color>
     <color name="actionBackgroundColorBlue">#0055a4</color>
     <color name="actionBackgroundColorBlueLight">#7bb3e7</color>
     <color name="actionBackgroundColorGray">#dfdfdf</color>
     <color name="actionBackgroundColorGrayLight">#f1f1f1</color>
-    <color name="black">#000000</color>
+    <color name="actionBackgroundLineColor">#0055a4</color>
     
     
 </resources>
