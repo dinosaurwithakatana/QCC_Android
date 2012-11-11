@@ -4,34 +4,77 @@
     android:layout_height="match_parent" 
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnFind"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/find_child_care" />
+<!--    <Button -->
+<!--         android:id="@+id/btnFind" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="@string/find_child_care" />  -->
 
-    <Button
-        android:id="@+id/btnTalkToExpert"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/talk_to_expert" />
+		<Button
+        	android:id="@+id/btnFind"
+        	android:layout_width="200dp"
+        	android:layout_height="match_parent"
+        	android:layout_marginTop="200dp"
+        	android:layout_gravity="center_horizontal"
+        	android:background="@drawable/yellowbutton"
+        	android:text="Find Child Care"
+        	style="@style/ButtonText"/>
 
-    <Button
-        android:id="@+id/btnChecklist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/checklist" />
+<!--     <Button -->
+<!--         android:id="@+id/btnTalkToExpert" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="@string/talk_to_expert" /> -->
 
-    <Button
-        android:id="@+id/btnPayingForCare"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/paying_for_care" />
+		<Button
+        	android:id="@+id/btnTalkToExpert"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center_horizontal"
+        	android:background="@drawable/redbutton"
+        	android:text="Talk to the Experts"
+        	style="@style/ButtonText"/>
+		
 
-    <Button
-        android:id="@+id/btnStateMonitoring"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/state_monitoring" />
+<!--     <Button -->
+<!--         android:id="@+id/btnChecklist" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="@string/checklist" /> -->
+
+		<Button
+        	android:id="@+id/btnChecklist"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center_horizontal"
+        	android:background="@drawable/greenbutton"
+        	android:text="Child Care Checklist"
+        	style="@style/ButtonText"/>
+		
+
+<!--     <Button -->
+<!--         android:id="@+id/btnPayingForCare" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="@string/paying_for_care" /> -->
+
+		<Button
+        	android:id="@+id/btnInformation"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center_horizontal"
+        	android:background="@drawable/bluebutton"
+        	android:text="Extra Information"
+        	style="@style/ButtonText"/>
+		
+
+<!--     <Button -->
+<!--         android:id="@+id/btnStateMonitoring" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="@string/state_monitoring" /> -->
+
+
+		
 
 </LinearLayout>
