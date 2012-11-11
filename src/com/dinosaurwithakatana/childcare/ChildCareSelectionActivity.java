@@ -11,9 +11,10 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -23,7 +24,7 @@ import android.widget.TextView;
  */
 public class ChildCareSelectionActivity extends Activity {
 
-	private String businessName, businessId, contactPhoneNumber, contactEmail, contactWebsite;
+	private String businessName, businessId, contactPhoneNumber, contactEmail, contactWebsite, contactAreaCode;
 	private String TAG = ChildCareSelectionActivity.class.getSimpleName();
 
 	public void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,44 @@ public class ChildCareSelectionActivity extends Activity {
 			txtZip.setText(responseObject.getString("Zip"));
 			txtCity.setText(responseObject.getString("City"));
 			contactEmail = responseObject.getString("Email");
+			contactPhoneNumber = responseObject.getString("Phone");
+			contactWebsite = responseObject.getString("Website");
+			contactAreaCode = responseObject.getString("Area Code");
+			
+			callContact.setText(contactAreaCode+"-"+contactPhoneNumber);
+			callContact.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					String fullContactNumber = contactAreaCode + "-" + contactPhoneNumber;
+					String uri = "tel:" + fullContactNumber.trim() ;
+					Intent intent = new Intent(Intent.ACTION_CALL);
+					intent.setData(Uri.parse(uri));
+					startActivity(intent);	
+				}
+			});
+			
+			emailContact.setText(contactEmail);
+			emailContact.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+			        emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{contactEmail});
+			        emailIntent.setType("plain/text");
+			        startActivity(Intent.createChooser(emailIntent, "Send email..."));	
+				}
+			});
+			
+			openWebsite.setText(contactWebsite);
+			openWebsite.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(contactWebsite));
+					startActivity(browserIntent);	
+				}
+			});
 			
 
 

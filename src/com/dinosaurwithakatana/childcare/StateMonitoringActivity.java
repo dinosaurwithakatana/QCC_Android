@@ -150,6 +150,13 @@ public class StateMonitoringActivity extends Activity {
 						startActivity(intent);
 
 					}
+				})
+				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						
+					}
 				});
 				
 				AlertDialog inquiriesDialog= builderInquiries.create();
