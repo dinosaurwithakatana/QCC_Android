@@ -10,6 +10,8 @@
         <item name="android:colorBackgroundCacheHint">#00000000</item>
         <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="android:editTextStyle">@style/MyTextEdit</item>
+        <item name="android:listViewStyle">@style/MyListView</item>
+        <item name="android:ratingBarStyle">@style/MyRating</item>
         
     </style>
     
@@ -73,12 +75,30 @@
 	    	<item name="android:textColor">#ffffff</item>
 	    	<item name="android:gravity">center</item>
 <!-- 	    	<item name="android:layout_margin">20dp</item> -->
-	    	<item name="android:textSize">20dp</item>
+	    	<item name="android:textSize">16dp</item>
 	    	<item name="android:textStyle">bold</item>
 	    	<item name="android:shadowColor">#000000</item>
 	    	<item name="android:shadowDx">1</item>
 	    	<item name="android:shadowDy">1</item>
 	    	<item name="android:shadowRadius">2</item>
+		</style>
+		
+	   	<style name="MyListView">
+	   	    <item name="android:divider">@drawable/divider</item>
+    		<item name="android:dividerHeight">1dp</item>
+    		<item name="android:textColor">#ffffff</item>
+	    	<item name="android:gravity">center</item>
+<!-- 	    	<item name="android:layout_margin">20dp</item> -->
+	    	<item name="android:textSize">12dp</item>
+	    	<item name="android:textStyle">bold</item>
+	    	<item name="android:shadowColor">#000000</item>
+	    	<item name="android:shadowDx">1</item>
+	    	<item name="android:shadowDy">1</item>
+	    	<item name="android:shadowRadius">2</item>
+	   	</style>
+	   	
+	   	<style name="MyRating" parent="@android:style/Widget.RatingBar">
+	   	    <item name="android:progressDrawable">@drawable/yellowstar</item>
 		</style>
 	   	
 </resources>
