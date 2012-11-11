@@ -70,4 +70,8 @@ website: www.decal.ga.gov</string>
 	<string name="other_inquiries_text">For other inquiries about child care or to a to an expert, call us at 877-255-
 4254.</string>
 	<string name="license">State Licensing</string>
+	<string name="business_name">Business Name</string>
+	<string name="type_of_care">Type of Care</string>
+	<string name="street_address">Street Address</string>
+	<string name="contact">Contact Information</string>
 </resources>

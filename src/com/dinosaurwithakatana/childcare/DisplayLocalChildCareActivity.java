@@ -13,7 +13,9 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 /**
  * @author vishnu
@@ -21,7 +23,7 @@ import android.widget.ArrayAdapter;
  */
 public class DisplayLocalChildCareActivity extends ListActivity {
 
-	ArrayList<String> childCareNames;
+	ArrayList<String> childCareNames, childCareIds;
 	private Bundle b;
 	private String zipCode;
 	private final String TAG = DisplayLocalChildCareActivity.class.getSimpleName();
@@ -30,6 +32,8 @@ public class DisplayLocalChildCareActivity extends ListActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		childCareNames = new ArrayList<String>();
+		childCareIds = new ArrayList<String>();
+		
 		setContentView(R.layout.activity_display_local_care);
 		
 		Intent intent = getIntent();
@@ -46,6 +50,7 @@ public class DisplayLocalChildCareActivity extends ListActivity {
 			
 			for(int i = 0; i<responseLength;i++){
 				childCareNames.add(o.getJSONObject(i).getString("Business Name"));
+				childCareIds.add(o.getJSONObject(i).getString("_id"));
 				}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -62,6 +67,21 @@ public class DisplayLocalChildCareActivity extends ListActivity {
 		ArrayAdapter<String> arrayAdapter =   new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,childCareNames);
 		setListAdapter(arrayAdapter);
 		
+	}
+	
+	@Override 
+	public void onListItemClick(ListView l, View v, int position, long id) {
+		// Do something when a list item is clicked
+
+//		Toast toast = Toast.makeText(getApplicationContext(), "You just clicked " + l.getItemAtPosition(position), Toast.LENGTH_SHORT);
+//		toast.show();
+
+		Intent intent = new Intent(DisplayLocalChildCareActivity.this,ChildCareSelectionActivity.class);
+		intent.putExtra("Name", (String)l.getItemAtPosition(position));
+		intent.putExtra("id",childCareIds.get(position));
+		startActivity(intent);
+
+		super.onListItemClick(l, v, position, id);
 	}
 	/**
 	 * 

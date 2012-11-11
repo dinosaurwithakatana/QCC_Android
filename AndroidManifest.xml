@@ -32,6 +32,7 @@
             <activity android:name="com.dinosaurwithakatana.childcare.ViewProfileActivity"/>
             <activity android:name="com.dinosaurwithakatana.childcare.StateMonitoringActivity"/>
             <activity android:name="com.dinosaurwithakatana.childcare.DisplayLocalChildCareActivity"/>
+            <activity android:name="com.dinosaurwithakatana.childcare.ChildCareSelectionActivity"/>
 
         </application>
 
