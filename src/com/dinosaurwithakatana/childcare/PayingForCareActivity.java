@@ -43,6 +43,13 @@ public class PayingForCareActivity extends Activity {
 						startActivity(browserIntent);
 						
 					}
+				})
+				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						
+					}
 				});
 
 				// 3. Get the AlertDialog from create()
@@ -66,6 +73,13 @@ public class PayingForCareActivity extends Activity {
 					public void onClick(DialogInterface dialog, int which) {
 						Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.compass.ga.gov"));
 						startActivity(browserIntent);
+						
+					}
+				})
+				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
 						
 					}
 				});
