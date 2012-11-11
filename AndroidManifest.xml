@@ -14,7 +14,7 @@
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
             android:theme="@style/QCCTheme"
-            android:logo="@drawable/qcclogobluewide">
+            android:logo="@drawable/ic_launcher">
             <activity
                 android:name=".LoginActivity"
                 android:label="@string/title_activity_main" >

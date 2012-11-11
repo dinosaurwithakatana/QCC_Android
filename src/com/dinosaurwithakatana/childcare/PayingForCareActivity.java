@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -22,6 +23,8 @@ public class PayingForCareActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_pay_for_care);
+		
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		final AlertDialog.Builder builderCaps= new AlertDialog.Builder(this);
 		Button btnCaps = (Button)findViewById(R.id.btn_LearnAboutCaps);
@@ -74,5 +77,23 @@ public class PayingForCareActivity extends Activity {
 			}
 		});
 	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case android.R.id.home:
+            	// This is called when the Home (Up) button is pressed
+                // in the Action Bar.
+                Intent parentActivityIntent = new Intent(this, MainActivity.class);
+                parentActivityIntent.addFlags(
+                        Intent.FLAG_ACTIVITY_CLEAR_TOP |
+                        Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(parentActivityIntent);
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    } 
 
 }
