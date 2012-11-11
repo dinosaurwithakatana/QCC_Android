@@ -46,6 +46,13 @@ public class StateMonitoringActivity extends Activity {
 						startActivity(intent);
 
 					}
+				})
+				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						
+					}
 				});
 				
 				AlertDialog complaintsDialog = builderComplaints.create();
@@ -74,6 +81,13 @@ public class StateMonitoringActivity extends Activity {
 						startActivity(intent);
 
 					}
+				})
+				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						
+					}
 				});
 				
 				AlertDialog abuseDialog= builderAbuse.create();
@@ -98,6 +112,12 @@ public class StateMonitoringActivity extends Activity {
 						Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.decal.ga.gov"));
 						startActivity(browserIntent);
 
+					}
+				})
+				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
 					}
 				});
 				
