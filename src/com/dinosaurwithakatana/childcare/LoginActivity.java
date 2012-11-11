@@ -84,6 +84,7 @@ public class LoginActivity extends Activity{
 							b.putString("lName",lName);
 							b.putString("email",emailAddress);
 							b.putString("phone",phoneNumber);
+							b.putString("username", responseObject.getString("username"));
 							i.putExtras(b);
 							startActivity(i);
 						}

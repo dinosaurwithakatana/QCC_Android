@@ -30,6 +30,7 @@
             <activity android:name="com.dinosaurwithakatana.childcare.PayingForCareActivity"/>
             <activity android:name="com.dinosaurwithakatana.childcare.TalkToAnExpertActivity"/>
             <activity android:name="com.dinosaurwithakatana.childcare.ViewProfileActivity"/>
+            <activity android:name="com.dinosaurwithakatana.childcare.StateMonitoringActivity"/>
 
         </application>
 
