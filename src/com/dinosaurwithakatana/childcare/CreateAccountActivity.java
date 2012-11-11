@@ -57,6 +57,10 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 	 */
 	public static class CreateAcctFragment extends Fragment {
 		private View rootView;
+		protected ArrayList<EditText> childFirstNames;
+		protected ArrayList<EditText> childMiddleNames;
+		protected ArrayList<EditText> childLastNames;
+		protected int numOfChildren;
 
 		public CreateAcctFragment() {
 		}
@@ -102,7 +106,6 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 				 childrenListener = new ChildrenSelectedListener();
 				 spnrChildren.setOnItemSelectedListener(new OnItemSelectedListener() {
 
-					 private int numOfChildren;
 					 /**
 					  * @return the education
 					  */
@@ -114,7 +117,7 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 					  * @param jobType the education to set
 					  */
 					 public void setNumOfChildren(int num) {
-						 this.numOfChildren = num;
+						numOfChildren = num;
 					 }
 
 					 @Override
@@ -146,6 +149,10 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 
 
 						 dynamicLayouts = new ArrayList<LinearLayout>();
+						 childFirstNames = new ArrayList<EditText>();
+						 childMiddleNames = new ArrayList<EditText>();
+						 childLastNames = new ArrayList<EditText>();
+						 
 
 						 for(int i = 0;i<numOfChildren;i++){
 							 //Horizontal Linear Layout for each of the children
@@ -168,16 +175,19 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 							 EditText edtxtChildFirstName = new EditText(getActivity().getBaseContext());
 							 edtxtChildFirstName.setHint("First Name");
 							 edtxtChildFirstName.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
+							 childFirstNames.add(edtxtChildFirstName);
 
 							 //EditText to accept middle name
 							 EditText edtxtChildMiddleName = new EditText(getActivity().getBaseContext());
 							 edtxtChildMiddleName.setHint("Middle Name");
 							 edtxtChildMiddleName.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
+							 childMiddleNames.add(edtxtChildMiddleName);
 							 
 							 //EditText to accept first name
 							 EditText edtxtChildLastName = new EditText(getActivity().getBaseContext());
 							 edtxtChildLastName.setHint("Last Name");
 							 edtxtChildLastName.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
+							 childLastNames.add(edtxtChildLastName);
 							 
 							 //Add Name stuff to it's layout
 							 lytNameLayout.addView(tvNamePrompt);
@@ -226,7 +236,59 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 							 lytAgeLayout.addView(spnrAgeSelect);
 
 
-
+							 switch(i){
+							 case 0:{
+								 edtxtChildFirstName.setId(R.id.txt_child_first_name_1);
+								 edtxtChildFirstName.setId(R.id.txt_child_middle_name_1);
+								 edtxtChildFirstName.setId(R.id.txt_child_last_name_1);
+								 spnrAgeSelect.setId(R.id.spnr_child_age_1);
+								 break;
+							 }
+							 case 1:{
+								 edtxtChildFirstName.setId(R.id.txt_child_first_name_2);
+								 edtxtChildFirstName.setId(R.id.txt_child_middle_name_2);
+								 edtxtChildFirstName.setId(R.id.txt_child_last_name_2);
+								 spnrAgeSelect.setId(R.id.spnr_child_age_2);
+								 break;
+							 }
+							 case 2:{
+								 edtxtChildFirstName.setId(R.id.txt_child_first_name_3);
+								 edtxtChildFirstName.setId(R.id.txt_child_middle_name_3);
+								 edtxtChildFirstName.setId(R.id.txt_child_last_name_3);
+								 spnrAgeSelect.setId(R.id.spnr_child_age_3);
+								 break;
+							 }
+							 case 3:{
+								 edtxtChildFirstName.setId(R.id.txt_child_first_name_4);
+								 edtxtChildFirstName.setId(R.id.txt_child_middle_name_4);
+								 edtxtChildFirstName.setId(R.id.txt_child_last_name_4);
+								 spnrAgeSelect.setId(R.id.spnr_child_age_4);
+								 break;
+							 }
+							 case 4:{
+								 edtxtChildFirstName.setId(R.id.txt_child_first_name_5);
+								 edtxtChildFirstName.setId(R.id.txt_child_middle_name_5);
+								 edtxtChildFirstName.setId(R.id.txt_child_last_name_5);
+								 spnrAgeSelect.setId(R.id.spnr_child_age_5);
+								 break;
+							 }
+							 case 5:{
+								 edtxtChildFirstName.setId(R.id.txt_child_first_name_6);
+								 edtxtChildFirstName.setId(R.id.txt_child_middle_name_6);
+								 edtxtChildFirstName.setId(R.id.txt_child_last_name_6);
+								 spnrAgeSelect.setId(R.id.spnr_child_age_6);
+								 break;
+							 }
+							 case 6:{
+								 edtxtChildFirstName.setId(R.id.txt_child_first_name_7);
+								 edtxtChildFirstName.setId(R.id.txt_child_middle_name_7);
+								 edtxtChildFirstName.setId(R.id.txt_child_last_name_7);
+								 spnrAgeSelect.setId(R.id.spnr_child_age_7);
+								 break;
+							 }
+							 default:
+									break;
+							 }
 
 							 //Add the whole shebang to the main layout
 							 lytTempLayout.addView(tvChildLabel);
@@ -258,11 +320,12 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 
 
 					 private String usernameInput, passwordInput, confirmPasswordInput, fNameInput, mNameInput, lNameInput, emailAddress, phoneNumber;
+					 private ArrayList<String> childFName = new ArrayList<String>();
+					 private ArrayList<String> childMName = new ArrayList<String>();
+					 private ArrayList<String> childLName = new ArrayList<String>();
 
 
 					 public void onClick(View v) {
-						 // TODO Auto-generated method stub
-
 						 usernameInput = username.getText().toString();
 						 try {
 							 passwordInput = AeSimpleSHA1.SHA1("salt"+password.getText().toString());
@@ -270,16 +333,13 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 							 // TODO Auto-generated catch block
 							 e2.printStackTrace();
 						 } catch (UnsupportedEncodingException e2) {
-							 // TODO Auto-generated catch block
 							 e2.printStackTrace();
 						 }
 						 try {
 							 confirmPasswordInput = AeSimpleSHA1.SHA1("salt"+confirmPassword.getText().toString());
 						 } catch (NoSuchAlgorithmException e1) {
-							 // TODO Auto-generated catch block
 							 e1.printStackTrace();
 						 } catch (UnsupportedEncodingException e1) {
-							 // TODO Auto-generated catch block
 							 e1.printStackTrace();
 						 }
 						 fNameInput = txtFName.getText().toString();
@@ -287,6 +347,12 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 						 lNameInput = txtLName.getText().toString();
 						 emailAddress = txtEmailAddress.getText().toString();
 						 phoneNumber = txtPhoneNumer.getText().toString();
+						 
+						 for(int i = 0;i<numOfChildren;i++){
+							 childFName.add(childFirstNames.get(i).getText().toString());
+							 childMName.add(childMiddleNames.get(i).getText().toString());
+							 childLName.add(childLastNames.get(i).getText().toString());
+						 }
 								 
 						 if(DEBUG){
 							 Log.v(TAG,"create clicked" + usernameInput + " " + fNameInput + " " + mNameInput + " " + lNameInput + " " + emailAddress );
@@ -302,6 +368,11 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 								 user.put("l_name",lNameInput);
 								 user.put("email_addr",emailAddress);
 								 user.put("phone_number",phoneNumber);
+								 for(int i = 0;i<numOfChildren;i++){
+									 user.put("child_"+i+"_f_name",childFName.get(i));
+									 user.put("child_"+i+"_m_name",childMName.get(i));
+									 user.put("child_"+i+"_l_name",childLName.get(i));
+								 }
 							 } catch (JSONException e){
 								 e.printStackTrace();
 							 }
