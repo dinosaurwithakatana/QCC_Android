@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 public class ChildrenSelectedListener implements OnItemSelectedListener {
-	private static final String TAG = "Child Care" +JobItemSelectedListener.class.getSimpleName();                                                                                                                  
+	private static final String TAG = "Child Care" +ChildrenSelectedListener.class.getSimpleName();                                                                                                                  
 	private int numOfChildren;
 	/**
 	 * @return the education
