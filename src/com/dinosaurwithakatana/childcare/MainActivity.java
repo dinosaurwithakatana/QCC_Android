@@ -63,6 +63,16 @@ public class MainActivity extends Activity {
 				startActivity(i);
 			}
 		});
+        
+        Button btnChecklist = (Button)findViewById(R.id.btnChecklist);
+        btnChecklist.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this,CheckListList.class);
+				startActivity(i);
+			}
+		});
     }
 
     @Override

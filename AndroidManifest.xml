@@ -33,6 +33,8 @@
             <activity android:name="com.dinosaurwithakatana.childcare.StateMonitoringActivity"/>
             <activity android:name="com.dinosaurwithakatana.childcare.DisplayLocalChildCareActivity"/>
             <activity android:name="com.dinosaurwithakatana.childcare.ChildCareSelectionActivity"/>
+            <activity android:name="com.dinosaurwithakatana.childcare.CheckListList"/>
+            <activity android:name="com.dinosaurwithakatana.childcare.ProviderActivity"/>
 
         </application>
 
