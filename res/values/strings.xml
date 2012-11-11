@@ -74,4 +74,5 @@ website: www.decal.ga.gov</string>
 	<string name="type_of_care">Type of Care</string>
 	<string name="street_address">Street Address</string>
 	<string name="contact">Contact Information</string>
+	<string name="rating">My Rating</string>
 </resources>

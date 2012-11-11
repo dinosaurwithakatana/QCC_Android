@@ -16,6 +16,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RatingBar;
+import android.widget.RatingBar.OnRatingBarChangeListener;
 import android.widget.TextView;
 
 /**
@@ -46,6 +48,7 @@ public class ChildCareSelectionActivity extends Activity {
 		Button callContact = (Button) findViewById(R.id.btnCallContact);
 		Button openWebsite = (Button) findViewById(R.id.btnWebsite);
 		Button emailContact = (Button) findViewById(R.id.btnEmailContact);
+		RatingBar myRating = (RatingBar) findViewById(R.id.rtngCareRating);
 
 		try{
 			String responseJSON = new GetSelectedCare().execute(businessId).get();
@@ -115,6 +118,16 @@ public class ChildCareSelectionActivity extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}  
+		
+		//if rating value is changed,
+		//display the current rating value in the result (textview) automatically
+		myRating.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
+			public void onRatingChanged(RatingBar ratingBar, float rating,
+				boolean fromUser) {
+	 
+	 
+			}
+		});
 	} 
 	/**
 	 * 

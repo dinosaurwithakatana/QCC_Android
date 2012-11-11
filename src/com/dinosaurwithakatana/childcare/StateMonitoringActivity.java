@@ -155,7 +155,6 @@ public class StateMonitoringActivity extends Activity {
 					
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						
 					}
 				});
 				
