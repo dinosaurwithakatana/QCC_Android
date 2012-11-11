@@ -61,6 +61,8 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 		protected ArrayList<EditText> childMiddleNames;
 		protected ArrayList<EditText> childLastNames;
 		protected int numOfChildren;
+		protected ArrayList<Double> ageLow;
+		protected ArrayList<Double> ageHigh;
 
 		public CreateAcctFragment() {
 		}
@@ -206,6 +208,8 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 
 							 //Spinner to select age
 							 Spinner spnrAgeSelect = new Spinner(getActivity().getBaseContext());
+							 ageLow = new ArrayList<Double>();
+							 ageHigh = new ArrayList<Double>();
 							 spnrAgeSelect.setOnItemSelectedListener(new OnItemSelectedListener(
 									 ) {
 
@@ -214,6 +218,51 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 										 AdapterView<?> arg0, View arg1,
 										 int arg2, long arg3) {
 									 // TODO Auto-generated method stub
+									 switch(arg2){
+									 case 0:{
+										 ageLow.add(-1.0);
+										 ageHigh.add(-1.0);
+										 break;
+									 }
+									 case 1:{
+										 ageLow.add(0.0);
+										 ageHigh.add(0.5);
+										 break;
+									 }
+									 case 2:{
+										 ageLow.add(0.5);
+										 ageHigh.add(1.0);
+										 break;
+									 }
+									 case 3:{
+										 ageLow.add(1.0);
+										 ageHigh.add(2.0);
+										 break;
+									 }
+									 case 4:{
+										 ageLow.add(2.0);
+										 ageHigh.add(3.0);
+										 break;
+									 }
+									 case 5:{
+										 ageLow.add(3.0);
+										 ageHigh.add(4.0);
+										 break;
+									 }
+									 case 6:{
+										 ageLow.add(4.0);
+										 ageHigh.add(5.0);
+										 break;
+									 }
+									 case 7:{
+										 ageLow.add(5.0);
+										 ageHigh.add(12.0);
+										 break;
+									 }
+									 default:
+											break;
+									 
+									 }
 
 								 }
 
@@ -369,9 +418,11 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 								 user.put("email_addr",emailAddress);
 								 user.put("phone_number",phoneNumber);
 								 for(int i = 0;i<numOfChildren;i++){
-									 user.put("child_"+i+"_f_name",childFName.get(i));
-									 user.put("child_"+i+"_m_name",childMName.get(i));
-									 user.put("child_"+i+"_l_name",childLName.get(i));
+									 user.put("child_"+(i+1)+"_f_name",childFName.get(i));
+									 user.put("child_"+(i+1)+"_m_name",childMName.get(i));
+									 user.put("child_"+(i+1)+"_l_name",childLName.get(i));
+									 user.put("child_"+(i+1)+"_age_range_low",ageLow.get(i));
+									 user.put("child_"+(i+1)+"_age_range_high",ageHigh.get(i));
 								 }
 							 } catch (JSONException e){
 								 e.printStackTrace();
