@@ -20,9 +20,6 @@ public class MainActivity extends Activity {
         Intent i = getIntent();
         b = i.getExtras();
         
-        if(b!=null){
-        	curUser = b.getParcelable("CurUser");
-        }
         Button btnTalkToAnExpert = (Button)findViewById(R.id.btnTalkToExpert);
         btnTalkToAnExpert.setOnClickListener(new View.OnClickListener(){
 

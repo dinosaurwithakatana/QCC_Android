@@ -22,7 +22,7 @@
         	android:layout_gravity="center_horizontal"
         	android:background="@drawable/yellowbutton"
         	android:text="Find Child Care"
-        	style="@style/ButtonText"/>
+        	style="@style/ButtonTextMain"/>
 
 <!--     <Button -->
 <!--         android:id="@+id/btnTalkToExpert" -->
@@ -40,7 +40,7 @@
         	android:layout_marginRight="25dp"
         	android:background="@drawable/redbutton"
         	android:text="Talk to the Experts"
-        	style="@style/ButtonText"/>
+        	style="@style/ButtonTextMain"/>
 		
 
 <!--     <Button -->
@@ -59,7 +59,7 @@
         	android:layout_marginRight="25dp"
         	android:background="@drawable/greenbutton"
         	android:text="Child Care Checklist"
-        	style="@style/ButtonText"/>
+        	style="@style/ButtonTextMain"/>
 		
 		<Button
         	android:id="@+id/btnPayingForCare"
@@ -71,7 +71,7 @@
         	android:layout_marginRight="25dp"
         	android:background="@drawable/bluebutton"
         	android:text="Paying for Care"
-        	style="@style/ButtonText"/>
+        	style="@style/ButtonTextMain"/>
 		
 
 <!--     <Button -->
@@ -89,7 +89,7 @@
         	android:layout_marginRight="25dp"
         	android:background="@drawable/violetbutton"
         	android:text="State Monitoring"
-        	style="@style/ButtonText"/>
+        	style="@style/ButtonTextMain"/>
 
 
 		

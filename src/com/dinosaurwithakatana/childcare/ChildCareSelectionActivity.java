@@ -31,7 +31,7 @@ public class ChildCareSelectionActivity extends Activity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_child_care_selection);
+		setContentView(R.layout.activity_child_care_selection);		
 
 		Intent i = getIntent();
 		businessName = i.getStringExtra("Name");
@@ -135,5 +135,7 @@ public class ChildCareSelectionActivity extends Activity {
 	public ChildCareSelectionActivity() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
 
 }

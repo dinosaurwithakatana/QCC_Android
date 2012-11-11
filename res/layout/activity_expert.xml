@@ -34,6 +34,6 @@
         	android:layout_marginRight="25dp"
         	android:background="@drawable/redbutton"
         	android:text="@string/expert_number"
-        	style="@style/ButtonText"/>
+        	style="@style/ButtonTextState"/>
 
 </LinearLayout>
