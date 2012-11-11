@@ -27,7 +27,7 @@
 	<string name="expert_hours">Our experts at 877-ALL-GA-KIDS can give you a list of referrals,
 personalize your search and answer any questions you have about child
 care in Georgia.</string>
-	<string name="expert_number">877-255-4254</string>
+	<string name="expert_number">Call Now!</string>
 	<string-array name="num_of_children">
 		<item>1</item>
 		<item>2</item>
@@ -52,4 +52,22 @@ care in Georgia.</string>
     <string name="learn_about_caps">Learn More About CAPS</string>
     <string name="learn_about_tanf">Learn More About TANF</string>
     <string name="open_website">Open State Application</string>
+    <string name="menu_profile">View Profile</string>
+    <string name="state_licensing">Bright from the Start: Georgia Department of Early Care and Learning
+administers the nationally recognized Georgia’s Pre-K Program, licenses
+child care centers and home-based child care, administers federal nutrition
+programs, and manages voluntary quality enhancement programs.</string>
+	<string name="complaints">Complaints or Inquiries to the State</string>
+	<string name="complaints_text">To file a complaint or make an inquiry about a program call Bright from the
+Start at 404-463-0703.</string>
+	<string name="call_now">Call Now!</string>
+	<string name="report_abuse">Report Child Abuse at a Child Care Program</string>
+	<string name="report_abuse_text">To report abuse call Bright from the Start Georgia at 404-463-0703.</string>
+	<string name="view_inspection">View State Inspection Reports</string>
+	<string name="view_inspection_text">To view the inspection report of a program, go to Bright from the Start
+website: www.decal.ga.gov</string>
+	<string name="other_inquiries">Other Inquiries</string>
+	<string name="other_inquiries_text">For other inquiries about child care or to a to an expert, call us at 877-255-
+4254.</string>
+	<string name="license">State Licensing</string>
 </resources>

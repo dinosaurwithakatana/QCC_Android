@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/license"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state_licensing" />
+
+    <Button
+        android:id="@+id/btnComplaints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/complaints" />
+
+    <Button
+        android:id="@+id/btnAbuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/report_abuse" />
+
+    <Button
+        android:id="@+id/btnViewInspection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_inspection" />
+
+    <Button
+        android:id="@+id/btnOtherInquiries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/other_inquiries" />
+
+</LinearLayout>

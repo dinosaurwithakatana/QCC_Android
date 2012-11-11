@@ -67,8 +67,25 @@ public class LoginActivity extends Activity{
 						if(responseObject.getString("password").equals(loginPassword)){
 							System.out.println("Login Successful!");
 							Log.d(TAG,"Login Successful!");
+							String fName = responseObject.getString("f_name");
+							String mName = responseObject.getString("m_name");
+							String lName = responseObject.getString("l_name");
+							String emailAddress = responseObject.getString("email_addr");
+							String phoneNumber = responseObject.getString("phone_number");
+							
 							Toast.makeText(getApplicationContext(), "Login Successful!", Toast.LENGTH_SHORT).show();
+							
+							CurrentUser curUser = new CurrentUser(fName,mName,lName,emailAddress,phoneNumber);
+							
 							Intent i = new Intent(LoginActivity.this,MainActivity.class);
+							Bundle b = new Bundle();
+							b.putString("fName", fName);
+							b.putString("mName",mName);
+							b.putString("lName",lName);
+							b.putString("email",emailAddress);
+							b.putString("phone",phoneNumber);
+							b.putString("username", responseObject.getString("username"));
+							i.putExtras(b);
 							startActivity(i);
 						}
 						else{
