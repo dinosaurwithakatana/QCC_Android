@@ -9,26 +9,26 @@
             android:bottom="6dp" />
     </shape>
 </item>
-<item android:state_focused="true">
-    <shape>
-        <gradient android:startColor="#40CB1759"
-            android:centerColor="#60CB1759" android:endColor="#90CB1759"
-            android:angle="270" android:centerX="0.5" android:centerY="0.5" />
-        <stroke android:width="8dp" android:color="#50ff0000" />
-        <corners android:radius="7dp" />
-        <padding android:left="10dp" android:top="6dp" android:right="10dp"
-            android:bottom="6dp" />
-    </shape>
-</item>
-<item android:state_selected="true">
-    <shape>
-        <gradient android:startColor="#402168D2"
-            android:centerColor="#602168D2" android:endColor="#902168D2"
-            android:angle="270" android:centerX="0.5" android:centerY="0.5" />
-        <stroke android:width="1dp" android:color="#50ff0000" />
-        <corners android:radius="7dp" />
-        <padding android:left="10dp" android:top="6dp" android:right="10dp"
-            android:bottom="6dp" />
-    </shape>
-</item>
+<!-- <item android:state_focused="true"> -->
+<!--     <shape> -->
+<!--         <gradient android:startColor="#40CB1759" -->
+<!--             android:centerColor="#60CB1759" android:endColor="#90CB1759" -->
+<!--             android:angle="270" android:centerX="0.5" android:centerY="0.5" /> -->
+<!--         <stroke android:width="8dp" android:color="#50ff0000" /> -->
+<!--         <corners android:radius="7dp" /> -->
+<!--         <padding android:left="10dp" android:top="6dp" android:right="10dp" -->
+<!--             android:bottom="6dp" /> -->
+<!--     </shape> -->
+<!-- </item> -->
+<!-- <item android:state_selected="true"> -->
+<!--     <shape> -->
+<!--         <gradient android:startColor="#402168D2" -->
+<!--             android:centerColor="#602168D2" android:endColor="#902168D2" -->
+<!--             android:angle="270" android:centerX="0.5" android:centerY="0.5" /> -->
+<!--         <stroke android:width="1dp" android:color="#50ff0000" /> -->
+<!--         <corners android:radius="7dp" /> -->
+<!--         <padding android:left="10dp" android:top="6dp" android:right="10dp" -->
+<!--             android:bottom="6dp" /> -->
+<!--     </shape> -->
+<!-- </item> -->
 </selector>

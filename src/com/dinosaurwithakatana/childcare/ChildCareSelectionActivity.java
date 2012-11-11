@@ -13,6 +13,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -27,7 +28,7 @@ public class ChildCareSelectionActivity extends Activity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_child_care_selection);
+		setContentView(R.layout.activity_child_care_selection);		
 
 		Intent i = getIntent();
 		businessName = i.getStringExtra("Name");
@@ -82,5 +83,7 @@ public class ChildCareSelectionActivity extends Activity {
 	public ChildCareSelectionActivity() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
 
 }
