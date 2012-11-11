@@ -28,6 +28,8 @@ public class ChildCareSelectionActivity extends Activity {
 
 	private String businessName, businessId, contactPhoneNumber, contactEmail, contactWebsite, contactAreaCode;
 	private String TAG = ChildCareSelectionActivity.class.getSimpleName();
+	private Bundle b;
+	protected JSONArray ratingArray;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,7 +38,25 @@ public class ChildCareSelectionActivity extends Activity {
 		Intent i = getIntent();
 		businessName = i.getStringExtra("Name");
 		businessId = i.getStringExtra("id");
+		b=i.getExtras();
 		
+		try {
+			System.out.println("attempting to get the stored ratings");
+			String ratingResponse = new GetRating().execute(b.getString("u_id")).get();
+			JSONObject ratingResponseObject = new JSONObject(ratingResponse);
+			
+//			ratingArray = ratingResponseObject.getJSONArray("rating");
+//			Log.v(TAG,ratingArray.toString());
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (ExecutionException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 		Log.v(TAG,"Business Name: "+businessName);
 
 		TextView txtBusinessName = (TextView)findViewById(R.id.txt_business_name);
@@ -124,7 +144,24 @@ public class ChildCareSelectionActivity extends Activity {
 		myRating.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
 			public void onRatingChanged(RatingBar ratingBar, float rating,
 				boolean fromUser) {
-	 
+				
+				JSONObject userRating = new JSONObject();
+				JSONObject postObject = new JSONObject();
+				ratingArray = new JSONArray();
+				JSONObject ratingObject = new JSONObject();
+				try {
+				JSONObject businessID = new JSONObject(businessId);
+					userRating.put("care_id",businessID);
+					userRating.put("rating", rating);
+					ratingArray.put(userRating);
+					ratingObject.put("rating", ratingArray);
+					postObject.put("$set",ratingObject);
+					new PostUserRating().execute(postObject.toString(),b.getString("u_id"));
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 	 
 			}
 		});

@@ -73,6 +73,7 @@ public class LoginActivity extends Activity{
 							String emailAddress = responseObject.getString("email_addr");
 							String phoneNumber = responseObject.getString("phone_number");
 							String zipCode = responseObject.getString("zip");
+							String userID = responseObject.getString("_id");
 							
 							Toast.makeText(getApplicationContext(), "Login Successful!", Toast.LENGTH_SHORT).show();
 							
@@ -87,6 +88,7 @@ public class LoginActivity extends Activity{
 							b.putString("phone",phoneNumber);
 							b.putString("username", responseObject.getString("username"));
 							b.putString("zip", zipCode);
+							b.putString("u_id", userID);
 							i.putExtras(b);
 							startActivity(i);
 						}
