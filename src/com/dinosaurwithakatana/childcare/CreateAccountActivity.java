@@ -51,6 +51,7 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 	private static ArrayList<LinearLayout> dynamicLayouts;
 	public static EditText txtEmailAddress;
 	public static EditText txtPhoneNumer;
+	public static EditText txtZipCode;
 
 	/**
 	 * Displays each section
@@ -95,6 +96,7 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 				 txtLName = ((EditText) rootView.findViewById(R.id.txtLastName));
 				 txtEmailAddress = ((EditText) rootView.findViewById(R.id.txtEmailAddress));
 				 txtPhoneNumer = ((EditText) rootView.findViewById(R.id.txtPhoneNumber));
+				 txtZipCode = ((EditText) rootView.findViewById(R.id.txt_zip_code));
 				 return rootView;
 			 }
 			 /*Display the experience screen*/
@@ -368,7 +370,7 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 				 createAccount.setOnClickListener(new View.OnClickListener() {
 
 
-					 private String usernameInput, passwordInput, confirmPasswordInput, fNameInput, mNameInput, lNameInput, emailAddress, phoneNumber;
+					 private String usernameInput, passwordInput, confirmPasswordInput, fNameInput, mNameInput, lNameInput, emailAddress, phoneNumber, zipCode;
 					 private ArrayList<String> childFName = new ArrayList<String>();
 					 private ArrayList<String> childMName = new ArrayList<String>();
 					 private ArrayList<String> childLName = new ArrayList<String>();
@@ -396,6 +398,7 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 						 lNameInput = txtLName.getText().toString();
 						 emailAddress = txtEmailAddress.getText().toString();
 						 phoneNumber = txtPhoneNumer.getText().toString();
+						 zipCode = txtZipCode.getText().toString();
 						 
 						 for(int i = 0;i<numOfChildren;i++){
 							 childFName.add(childFirstNames.get(i).getText().toString());
@@ -417,6 +420,7 @@ public class CreateAccountActivity extends FragmentActivity implements TabListen
 								 user.put("l_name",lNameInput);
 								 user.put("email_addr",emailAddress);
 								 user.put("phone_number",phoneNumber);
+								 user.put("zip", zipCode);
 								 for(int i = 0;i<numOfChildren;i++){
 									 user.put("child_"+(i+1)+"_f_name",childFName.get(i));
 									 user.put("child_"+(i+1)+"_m_name",childMName.get(i));

@@ -44,12 +44,25 @@ public class MainActivity extends Activity {
 			}
 		});
         
+        //Load Activity to inform user about state monitoring
         Button btnStateMonitoring = (Button)findViewById(R.id.btnStateMonitoring);
         btnStateMonitoring.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(MainActivity.this,StateMonitoringActivity.class);
+				startActivity(i);
+			}
+		});
+        
+        //Load activity to find local care sites
+        Button btnFindCare = (Button)findViewById(R.id.btnFind);
+        btnFindCare.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this,DisplayLocalChildCareActivity.class);
+				i.putExtras(b);
 				startActivity(i);
 			}
 		});
