@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,6 +21,8 @@ public class StateMonitoringActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_state_monitoring);
+		
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		Button btnComplaints = (Button)findViewById(R.id.btnComplaints);
 		Button btnAbuse = (Button)findViewById(R.id.btnAbuse);
@@ -155,5 +158,23 @@ public class StateMonitoringActivity extends Activity {
 			}
 		});
 	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case android.R.id.home:
+            	// This is called when the Home (Up) button is pressed
+                // in the Action Bar.
+                Intent parentActivityIntent = new Intent(this, MainActivity.class);
+                parentActivityIntent.addFlags(
+                        Intent.FLAG_ACTIVITY_CLEAR_TOP |
+                        Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(parentActivityIntent);
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    } 
 
 }

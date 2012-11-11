@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/watermarkblue">
 
     <ImageView
         android:id="@+id/bannerImage"
@@ -19,6 +20,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="5dp"
         android:ems="10"
+        android:textColor="#222222"
         android:hint="@string/username"
         android:inputType="textNoSuggestions|textPersonName" >
 
@@ -30,6 +32,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textColor="#222222"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="36dp"
         android:inputType="textPassword"
