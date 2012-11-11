@@ -24,7 +24,9 @@
 	<string name="paying_for_care">Paying for Care</string>
 	<string name="state_monitoring">State Monitoring</string>
 	<string name="talk_expert">Talk to an Expert!</string>
-	<string name="expert_hours">M-F 8:30AM-5PM EST</string>
+	<string name="expert_hours">Our experts at 877-ALL-GA-KIDS can give you a list of referrals,
+personalize your search and answer any questions you have about child
+care in Georgia.</string>
 	<string name="expert_number">877-255-4254</string>
 	<string-array name="num_of_children">
 		<item>1</item>
@@ -59,4 +61,7 @@
     <item name="android:shadowDy">1</item>
     <item name="android:shadowRadius">2</item>
 	</style>
+    <string name="learn_about_caps">Learn More About CAPS</string>
+    <string name="learn_about_tanf">Learn More About TANF</string>
+    <string name="open_website">Open State Application</string>
 </resources>

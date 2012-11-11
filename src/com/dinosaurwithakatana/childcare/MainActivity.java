@@ -23,6 +23,18 @@ public class MainActivity extends Activity {
                 startActivity(i);
             }
         });
+        
+        Button btnPayForCare = (Button)findViewById(R.id.btnPayingForCare);
+        btnPayForCare.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this,PayingForCareActivity.class);
+				startActivity(i);
+				
+			}
+		});
     }
 
     @Override

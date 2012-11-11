@@ -26,6 +26,7 @@
             <activity android:name="com.dinosaurwithakatana.childcare.MainActivity"/>
 
             <activity android:name="com.dinosaurwithakatana.childcare.CreateAccountActivity"/>
+            <activity android:name="com.dinosaurwithakatana.childcare.PayingForCareActivity"/>
             <activity android:name="com.dinosaurwithakatana.childcare.TalkToAnExpertActivity"/>
 
         </application>
