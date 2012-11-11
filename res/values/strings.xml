@@ -75,4 +75,10 @@ website: www.decal.ga.gov</string>
 	<string name="street_address">Street Address</string>
 	<string name="contact">Contact Information</string>
 	<string name="rating">My Rating</string>
+	<string name="provider_chk_1">Provider talks to children at eye-level.</string>
+	<string name="provider_chk_2">Provider responds to a hurt or unhappy child.</string>
+	<string name="provider_chk_3">Provider has received at least a minimum of 10 hours of training annually (suggested minimum: 20 hours).</string>
+	<string name="provider_chk_4">Provider has a high school diploma or CDA (Child Development Associate) or higher degree.</string>
+	<string name="provider_chk_5">Provider has relevant early childhood experience.</string> 
+	<string name="provider_chk_6">Staff turnover is low. The same provider remains with the child for most of the year.</string>
 </resources>

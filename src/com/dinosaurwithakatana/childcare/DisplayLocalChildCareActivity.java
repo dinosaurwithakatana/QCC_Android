@@ -88,6 +88,7 @@ public class DisplayLocalChildCareActivity extends ListActivity {
 		Intent intent = new Intent(DisplayLocalChildCareActivity.this,ChildCareSelectionActivity.class);
 		intent.putExtra("Name", (String)l.getItemAtPosition(position));
 		intent.putExtra("id",childCareIds.get(position));
+		intent.putExtras(b);
 		startActivity(intent);
 
 		super.onListItemClick(l, v, position, id);
