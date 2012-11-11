@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
+        android:textStyle="bold"
         android:text="@string/business_name" />
 
     <TextView
@@ -24,6 +25,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
@@ -39,6 +41,7 @@
 
     <TextView
         android:id="@+id/textView3"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -83,6 +86,7 @@
 
     <TextView
         android:id="@+id/textView4"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -167,6 +171,7 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:paddingTop="15dp"
             android:layout_marginLeft="20dp"
             android:text="@string/rating"
