@@ -7,10 +7,10 @@
     <ImageView
         android:id="@+id/bannerImage"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="210dp"
+    
         android:layout_marginBottom="20dp"
-        android:src="@drawable/vectorlogobig" />
+        android:src="@drawable/vectorlogobiggray" />
 
     <EditText
         android:id="@+id/txtUsernameInput"
@@ -43,7 +43,7 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/greenbutton"
         android:text="Sign In!"
-        style="@style/ButtonText"/>
+        style="@style/ButtonTextLogin"/>
     
     <Button
         android:id="@+id/btnNewUser"
@@ -52,6 +52,6 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/orangebutton"
         android:text="New User"
-        style="@style/ButtonText"/>
+        style="@style/ButtonTextLogin"/>
 
 </LinearLayout>
