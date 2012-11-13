@@ -17,12 +17,12 @@ Java 1.6
 
 Walkthrough
 
-![Login Screen] (https://github.com/burntcookie90/QCC_Android/blob/master/Screenshots/login_screen.png)
+![Login Screen](https://dl.dropbox.com/u/4109535/QCC_Screens/login_screen.png)
 
-![Create Account](https://github.com/burntcookie90/QCC_Android/blob/master/Screenshots/children_screen.png)
+![Create Account](https://dl.dropbox.com/u/4109535/QCC_Screens/children_screen.png)
 
 Creating an account works for the most part. However, only children names are saved for now. Age range is not.
 
-![Checklist] (https://github.com/burntcookie90/QCC_Android/blob/master/Screenshots/checklist_screen.png)
+![Checklist] (https://dl.dropbox.com/u/4109535/QCC_Screens/checklist_screen.png)
 
 Checklist is not persistant, only Provider/teacher shows a real checklist.
